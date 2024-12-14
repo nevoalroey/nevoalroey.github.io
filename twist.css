@@ -47,6 +47,11 @@ section {
     text-align: center;
     position: relative;
     animation: fadeInUp 1s ease-in-out;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+section:hover {
+    background-color: #FF6347; /* Change background to Tomato Red on hover */
 }
 
 h2 {
@@ -199,4 +204,62 @@ section::after {
     position: absolute;
     top: 5px;
     left: 25px;
+}
+
+/* Image Section at the Bottom */
+.image-section {
+    background: #FFFFFF;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    margin: 20px auto;
+    padding: 15px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+/* Image styling remains untouched */
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px #000;
+    max-width: 100%; /* Ensure the image does not exceed the container */
+}
+
+/* Play/Pause Button Styling */
+#playPauseBtn {
+    background-color: #FF6347; /* Tomato Red */
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0px #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* Center the play button */
+    display: block;         /* Make the button a block element */
+    margin: 0 auto;         /* Center horizontally */
+    text-align: center;     /* Ensure the text is centered inside the button */
+}
+
+#playPauseBtn:hover {
+    background-color: #FFD700; /* Golden Yellow */
+    transform: translateY(-5px); /* Button moves up a little */
+}
+
+#playPauseBtn:active {
+    transform: translateY(2px); /* Button "press" effect */
+}
+
+#playPauseBtn:focus {
+    outline: none; /* Remove outline when focused */
 }
