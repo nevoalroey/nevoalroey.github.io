@@ -223,15 +223,19 @@ section::after {
 }
 
 /* Image styling remains untouched */
+/* Image Section */
 .image-section img {
     width: 100%;
     height: auto;
+    max-width: 100%; /* Prevents the image from exceeding its container width */
     border-radius: 5px;
-    border: 2px solid #000;
-    box-shadow: 3px 3px 0px #000;
-    max-width: 100%; /* Ensure the image does not exceed the container */
+    border: none; /* Removed the border */
+    box-shadow: none; /* Removed the box shadow around the image */
+    animation: scaleIn 1s ease-out;
 }
 
+
+/* Play/Pause Button Styling */
 /* Play/Pause Button Styling */
 #playPauseBtn {
     background-color: #FF6347; /* Tomato Red */
@@ -244,10 +248,10 @@ section::after {
     box-shadow: 3px 3px 0px #000;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    
+
     /* Center the play button */
     display: block;         /* Make the button a block element */
-    margin: 0 auto;         /* Center horizontally */
+    margin: 20px auto;      /* Center horizontally with some space around */
     text-align: center;     /* Ensure the text is centered inside the button */
 }
 
@@ -263,3 +267,4 @@ section::after {
 #playPauseBtn:focus {
     outline: none; /* Remove outline when focused */
 }
+
