@@ -10,20 +10,19 @@
         <h1>Nevo Alroey Website</h1>
     </header>
     
-    <!-- Audio Player with controls -->
-    <audio id="audioPlayer" loop autoplay>
+    <audio id="audioPlayer" loop>
         <source src="DavidBroza.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    
+
     <!-- Play and Pause buttons -->
-    <button id="playPauseBtn">Pause</button>
-    
+    <button id="playPauseBtn">Play</button>
+
     <section>
         <h2>HTML</h2>  
         <ul>
-            <li> <a href="https://nevoalroey.github.io/2nd_Task.html"> למטלה 2</a></li>
-            <li> <a href="https://nevoalroey.github.io/3rd_Task.html"> למטלה 3</a></li>
+            <li><a href="https://nevoalroey.github.io/2nd_Task.html" target="_blank"> למטלה 2</a></li>
+            <li><a href="https://nevoalroey.github.io/3rd_Task.html" target="_blank"> למטלה 3</a></li>
         </ul>
     </section>
 
@@ -49,13 +48,11 @@
     <section>
         <h2>קישורים חיצוניים</h2>
         <ul>
-            <li> <a href="https://www.pinterest.com/pin/678565868883222551/">השראה  </a></li>
-            <li> <a href="https://www.tau.ac.il/~ehadas/twist/twist.htmll"> אתר הקורס</a></li>
-            <li> <a href="https://pmyuval.github.io/twist/twist.html">אתר התרגיל  </a></li>
-            <li> <a href="https://www.w3schools.com"> W3School </a></li>
-        </ul>
-        <ul>
-            <li> <a href="https://www.youtube.com/watch?v=tmwcjNE1eQw"> השיר האהוב עלי </a></li>
+            <li><a href="https://www.pinterest.com/pin/678565868883222551/" target="_blank">השראה</a></li>
+            <li><a href="https://www.tau.ac.il/~ehadas/twist/twist.htmll" target="_blank">אתר הקורס</a></li>
+            <li><a href="https://pmyuval.github.io/twist/twist.html" target="_blank">אתר התרגיל</a></li>
+            <li><a href="https://www.w3schools.com" target="_blank">W3School</a></li>
+            <li><a href="https://www.youtube.com/watch?v=UXInk1PCsc8" target="_blank">קטע אנימציה נחמד</a></li>
         </ul>
     </section>
     
@@ -67,10 +64,14 @@
         // Get references to the audio element and button
         const audioPlayer = document.getElementById('audioPlayer');
         const playPauseBtn = document.getElementById('playPauseBtn');
-        
-        // The audio will start playing automatically when the page loads
-        audioPlayer.play();
-        
+
+        // Set the initial button text based on the audio's state
+        if (audioPlayer.paused) {
+            playPauseBtn.textContent = 'Play';
+        } else {
+            playPauseBtn.textContent = 'Pause';
+        }
+
         // Add event listener to the button for toggling play/pause
         playPauseBtn.addEventListener('click', () => {
             if (audioPlayer.paused) {
