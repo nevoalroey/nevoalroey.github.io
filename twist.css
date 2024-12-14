@@ -1,73 +1,112 @@
-body{
-	direction:rtl;
-	background:#B6B6B3;
-	margin:5%;
-	font-size: 150%;
-	font-family: Arial, "Times New Roman", serif;	
+body {
+    direction: rtl;
+    background: #B6B6B3;
+    margin: 5%;
+    font-size: 150%;
+    font-family: Arial, "Times New Roman", serif;
 }
 
-header{
-	background: #BBBBBB;
-	text-align: center;
-	padding-bottom: 15px;
+header {
+    background: #BBBBBB;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
-h1{
-	color: #555555;
+h1 {
+    color: #555555;
 }
 
-nav{
-	font-variant: small-caps;	
-	font-size: 150%;
+nav {
+    font-variant: small-caps;
+    font-size: 150%;
 }
 
-h2{
-	color: #666666;
-	background: #BBBBBB;
+h2 {
+    color: #666666;
+    background: #BBBBBB;
 }
 
-section{
-	width:20%;
-	margin-right: 2%;
-	display:inline-block;
-	float:right;
+section {
+    width: 20%;
+    margin-right: 2%;
+    display: inline-block;
+    float: right;
 }
 
-summary{
-	font-style:normal;
+summary {
+    font-style: normal;
 }
 
-details{
-	font-style: italic;
+details {
+    font-style: italic;
 }
 
-footer{
-	background: #BBBBBB;
-	height:100px;
-	clear: both;
+footer {
+    background: #BBBBBB;
+    height: 100px;
+    clear: both;
 }
 
-img{
-	width: 100px;
+img {
+    width: 100px;
 }
 
 a {
-	text-decoration: none;
-	background-color: #BBBBBB;
-	color: #666666;
+    text-decoration: none;
+    background-color: #BBBBBB;
+    color: #666666;
 }
 
 progress {
-	background: #ff0000;
+    width: 100%;
+    height: 25px;
+    margin: 10px 0;
+    border-radius: 12px;
+    background: #eee;
+    appearance: none; /* Remove default browser styles */
+    overflow: hidden;
 }
 
+/* Progress bar styles for different browsers */
 progress::-webkit-progress-bar {
-	background-color: #BBBBBB;	
+    background-color: #BBBBBB;
 }
 
 progress::-webkit-progress-value {
-	background-color: #666666 !important;
-} 
+    background-color: #666666;
+    transition: width 2s ease-in-out; /* Smooth transition */
+}
+
+/* Mozilla (Firefox) styles */
 progress::-moz-progress-bar {
-	background-color: #666666 !important;
+    background-color: #666666;
+}
+
+/* Keyframes for animating the progress bars */
+@keyframes fillProgress {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress-value);
+    }
+}
+
+/* Apply animation to progress bars */
+.progress-bar {
+    animation: fillProgress 2s ease-in-out forwards;
+    --progress-value: 50%; /* Default value for the first bar */
+}
+
+/* Set progress values for each specific bar */
+progress:nth-of-type(1) {
+    --progress-value: 50%;
+}
+
+progress:nth-of-type(2) {
+    --progress-value: 20%;
+}
+
+progress:nth-of-type(3) {
+    --progress-value: 5%;
 }
