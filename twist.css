@@ -1,140 +1,137 @@
-body {
-    direction: rtl;
-    background: #F7F7F7; /* Light background for contrast */
-    margin: 5%;
-    font-size: 150%;
-    font-family: Arial, "Times New Roman", serif;
-    color: #333; /* Darker text for readability */
+/* Global Reset for Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    direction: rtl;
+    background: #87CEEB; /* Light Sky Blue for a retro base */
+    margin: 0;
+    font-size: 100%;
+    font-family: Arial, "Times New Roman", serif;
+    color: #333;
+}
+
+/* Header */
 header {
-    background: #FF6347; /* Tomato Red (bright and retro) */
+    background: #FF6347; /* Tomato Red */
     text-align: center;
-    padding-bottom: 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin: 2% auto;
+    width: 90%;
 }
 
 h1 {
-    color: #FFFF00; /* Bright Yellow (energetic, retro feel) */
+    color: #FFFF00; /* Bright Yellow */
     font-size: 2.5em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow for pop */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: bold;
 }
 
-nav {
-    font-variant: small-caps;
-    font-size: 150%;
-    color: #32CD32; /* Lime Green for contrast */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+/* Sections Styled as Floating Windows */
+section {
+    background: #FFFFFF;
+    border: 3px solid #000; /* Bold black outlines */
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000; /* Offset shadow for retro look */
+    margin: 20px;
+    padding: 15px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
 }
 
 h2 {
     color: #FFD700; /* Golden Yellow */
-    background: #4B0082; /* Indigo (retro vibe) */
+    background: #4B0082; /* Indigo */
     padding: 5px;
+    margin-bottom: 10px;
     border-radius: 5px;
+    border: 2px solid #000;
 }
 
-section {
-    width: 20%;
-    margin-right: 2%;
-    display: inline-block;
-    float: right;
-    background-color: #FF1493; /* Deep Pink */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); /* Retro depth */
-}
-
-summary {
-    font-style: normal;
-}
-
-details {
-    font-style: italic;
-}
-
-footer {
-    background: #00BFFF; /* Deep Sky Blue */
-    height: 100px;
-    clear: both;
-    color: #FFFFFF;
-    text-align: center;
-    line-height: 100px;
-    font-size: 1.2em;
-}
-
-img {
-    width: 100px;
-    border-radius: 50%;
-    border: 3px solid #FF69B4; /* Hot Pink border */
-}
-
+/* Links */
 a {
+    display: inline-block;
     text-decoration: none;
     background-color: #32CD32; /* Lime Green */
-    color: #FFFFFF; /* White text for contrast */
+    color: #FFFFFF;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px #000;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    background-color: #FFD700; /* Golden Yellow on hover */
-    color: #000000; /* Black text on hover */
+    background-color: #FFD700; /* Golden Yellow */
+    color: #000000;
+    box-shadow: none;
+    transform: translate(2px, 2px);
 }
 
+/* Progress Bars */
 progress {
     width: 100%;
-    height: 25px;
-    margin: 10px 0;
-    border-radius: 12px;
-    background: #DDDDDD; /* Soft gray background */
-    appearance: none; /* Remove default browser style */
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    appearance: none;
+    box-shadow: 3px 3px 0px #000;
     overflow: hidden;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Retro shadow */
 }
 
-/* Progress bar styles for different browsers */
 progress::-webkit-progress-bar {
-    background-color: #DDDDDD;
+    background: #DDDDDD; /* Light Gray */
 }
 
 progress::-webkit-progress-value {
-    background-color: #FF4500; /* Orange-Red for a pop */
-    transition: width 2s ease-in-out;
+    background: #FF4500; /* Orange Red */
 }
 
-/* Mozilla (Firefox) styles */
 progress::-moz-progress-bar {
-    background-color: #FF4500;
+    background: #FF4500;
 }
 
-/* Keyframes for animating the progress bars */
-@keyframes fillProgress {
-    from {
-        width: 0%;
-    }
-    to {
-        width: var(--progress-value);
-    }
+/* Footer Style (optional if needed) */
+footer {
+    background: #00BFFF; /* Deep Sky Blue */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 3px solid #000;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Apply animation to progress bars */
-.progress-bar {
-    animation: fillProgress 2s ease-in-out forwards;
-    --progress-value: 50%; /* Default value for the first bar */
+/* Additional Retro UI Elements */
+section::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #FF4500; /* Close Button */
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
-/* Set progress values for each specific bar */
-progress:nth-of-type(1) {
-    --progress-value: 50%;
-}
-
-progress:nth-of-type(2) {
-    --progress-value: 20%;
-}
-
-progress:nth-of-type(3) {
-    --progress-value: 5%;
+section::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #32CD32; /* Minimize Button */
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 25px;
 }
