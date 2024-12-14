@@ -1,103 +1,86 @@
 <!DOCTYPE html>
 <html lang="he">
-    <head>
-        <meta charset="UTF-8">
-        <title>Nevo Alroey</title>
-        <link rel="stylesheet" type="text/css" href="twist.css">
-    </head>
-    <body>
-       
-        <header>
-            <h1>Nevo Alroey Website</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Nevo Alroey</title>
+    <link rel="stylesheet" type="text/css" href="twist.css">
+</head>
+<body>
+    <header>
+        <h1>Nevo Alroey Website</h1>
+    </header>
+    
+    <!-- Audio Player with controls -->
+    <audio id="audioPlayer" loop autoplay>
+        <source src="DavidBroza.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- Play and Pause buttons -->
+    <button id="playPauseBtn">Pause</button>
+    
+    <section>
+        <h2>HTML</h2>  
+        <ul>
+            <li> <a href="https://nevoalroey.github.io/2nd_Task.html"> למטלה 2</a></li>
+            <li> <a href="https://nevoalroey.github.io/3rd_Task.html"> למטלה 3</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>CSS</h2>  
+        <p>
+            שליטה בדרכים השונות לשלב CSS (50%) 
+            <progress class="progress-bar" max="100" value="50"></progress><br/>
+            התקדמות ב-CSS (20%) 
+            <progress class="progress-bar" max="100" value="20"></progress><br/>
+            טריקים ב-CSS (5%) 
+            <progress class="progress-bar" max="100" value="5"></progress>
+        </p>
+    </section>
+
+    <section>
+        <h2>JavaScript</h2>  
+        <ul>
+            <!-- Add JavaScript content here -->
+        </ul>
+    </section>
+
+    <section>
+        <h2>קישורים חיצוניים</h2>
+        <ul>
+            <li> <a href="https://www.pinterest.com/pin/678565868883222551/">השראה  </a></li>
+            <li> <a href="https://www.tau.ac.il/~ehadas/twist/twist.htmll"> אתר הקורס</a></li>
+            <li> <a href="https://pmyuval.github.io/twist/twist.html">אתר התרגיל  </a></li>
+            <li> <a href="https://www.w3schools.com"> W3School </a></li>
+        </ul>
+        <ul>
+            <li> <a href="https://www.youtube.com/watch?v=tmwcjNE1eQw"> השיר האהוב עלי </a></li>
+        </ul>
+    </section>
+    
+    <section class="image-section">
+        <img src="1312.png" alt="ACAB Cartoon" />
+    </section>
+
+    <script>
+        // Get references to the audio element and button
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
         
-            <!-- Audio Player with controls -->
-            <audio id="audioPlayer" loop autoplay>
-                <source src="DavidBroza.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+        // The audio will start playing automatically when the page loads
+        audioPlayer.play();
         
-            <!-- Play and Pause buttons -->
-            <button id="playPauseBtn">Pause</button>
-        
-            <script>
-                // Get references to the audio element and button
-                const audioPlayer = document.getElementById('audioPlayer');
-                const playPauseBtn = document.getElementById('playPauseBtn');
-        
-                // The audio will start playing automatically when the page loads
+        // Add event listener to the button for toggling play/pause
+        playPauseBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
                 audioPlayer.play();
-        
-                // Add event listener to the button for toggling play/pause
-                playPauseBtn.addEventListener('click', () => {
-                    if (audioPlayer.paused) {
-                        audioPlayer.play();
-                        playPauseBtn.textContent = 'Pause';
-                    } else {
-                        audioPlayer.pause();
-                        playPauseBtn.textContent = 'Play';
-                    }
-                });
-            </script>
-            
-
-        <section>
-            <h2>HTML</h2>  
-            <ul>
-                <li> <a href="https://nevoalroey.github.io/2nd_Task.html"> למטלה 2</a></li>
-                <li> <a href="https://nevoalroey.github.io/3rd_Task.html"> למטלה 3</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>CSS</h2>  
-            <p>
-                שליטה בדרכים השונות לשלב CSS (50%) 
-                <progress class="progress-bar" max="100" value="50"></progress><br/>
-                התקדמות ב-CSS (20%) 
-                <progress class="progress-bar" max="100" value="20"></progress><br/>
-                טריקים ב-CSS (5%) 
-                <progress class="progress-bar" max="100" value="5"></progress>
-            </p>
-        </section>
-
-        <section>
-            <h2>JavaScript</h2>  
-            <ul>
-                <!-- Add JavaScript content here -->
-            </ul>
-        </section>
-
-        <section>
-            <h2>קישורים חיצוניים</h2>
-            <ul>
-                <li> <a href="https://www.pinterest.com/pin/678565868883222551/">השראה  </a></li>
-                <li> <a href="https://www.tau.ac.il/~ehadas/twist/twist.htmll"> אתר הקורס</a></li>
-                <li> <a href="https://pmyuval.github.io/twist/twist.html">אתר התרגיל  </a></li>
-                <li> <a href="https://www.w3schools.com"> W3School </a></li>
-            </ul><li> <a href="https://www.youtube.com/watch?v=tmwcjNE1eQw"> השיר האהוב עלי </a></li>
-            </ul>
-        </section>
-        
-        <section class="image-section">
-            <img src="1312.png" alt="ACAB Cartoon" />
-        </section>
-
-        <script>
-            // Get audio player and button elements
-            const audioPlayer = document.getElementById('audioPlayer');
-            const playPauseBtn = document.getElementById('playPauseBtn');
-
-            // Play or Pause the audio when the button is clicked
-            playPauseBtn.addEventListener('click', () => {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    playPauseBtn.textContent = 'Pause'; // Change button text to "Pause"
-                } else {
-                    audioPlayer.pause();
-                    playPauseBtn.textContent = 'Play'; // Change button text to "Play"
-                }
-            });
-        </script>
-    </body>
+                playPauseBtn.textContent = 'Pause';
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.textContent = 'Play';
+            }
+        });
+    </script>
+</body>
 </html>
