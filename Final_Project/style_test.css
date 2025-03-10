@@ -1,0 +1,34 @@
+/* Apply the background to the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('Final_Project/Assets/Background/background.png') no-repeat center center/cover;
+    background-attachment: fixed;  /* Keeps the background fixed when scrolling */
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+}
+
+#character, #jeep {
+    position: absolute;
+    bottom: 20px;
+    width: 100px; /* Adjust size */
+    height: 100px; /* Adjust size */
+    background-size: cover;
+    z-index: 1; /* Ensure character and jeep appear above the background */
+}
+
+#character {
+    left: 30%;
+    background-image: url('Final_Project/Assets/man/walking_sheet.png');
+}
+
+#jeep {
+    left: 50%;
+    background-image: url('Final_Project/Assets/Jeep/Idle.png');
+}
