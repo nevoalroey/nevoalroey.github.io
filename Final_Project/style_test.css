@@ -1,34 +1,76 @@
-/* Apply the background to the whole page */
+/* Basic reset for the page */
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: url('Final_Project/Assets/Background/background.png') no-repeat center center/cover;
-    background-attachment: fixed;  /* Keeps the background fixed when scrolling */
-}
-
-#game-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden;
-}
-
-#character, #jeep {
+  }
+  
+  /* Shared sprite styling */
+  .sprite {
     position: absolute;
-    bottom: 20px;
-    width: 100px; /* Adjust size */
-    height: 100px; /* Adjust size */
-    background-size: cover;
-    z-index: 1; /* Ensure character and jeep appear above the background */
-}
-
-#character {
-    left: 30%;
-    background-image: url('Final_Project/Assets/man/walking_sheet.png');
-}
-
-#jeep {
-    left: 50%;
-    background-image: url('Final_Project/Assets/Jeep/Idle.png');
-}
+    image-rendering: pixelated;
+  }
+  
+  /* Poly Sprite (existing) */
+  .poly {
+    width: 48px;  /* Adjust based on your sprite size */
+    height: 48px;
+    bottom: 50%; /* Adjust Poly's vertical position on screen */
+    left: 49%;   /* Adjust horizontal position as needed */
+    transform: scale(1.5); /* Correct scaling using transform */
+    transition: all 3s ease-in-out;
+  }
+  
+  .poly.idle {
+    background: url('assets/poly/smoking_sheet.png');
+    animation: idle 2.5s steps(10) infinite;
+  }
+  
+  .poly.walk {
+    background: url('assets/poly/walking_sheet.png');
+    animation: walk 1s steps(4) infinite;
+    transition: left 3s linear, top 3s linear;
+  }
+  
+  @keyframes idle {
+    from { background-position: 0px; }
+    to   { background-position: -480px; }
+  }
+  
+  @keyframes walk {
+    from { background-position: 0px; }
+    to   { background-position: 200px; }
+  }
+  
+  /* Jeep Sprite */
+  .jeep {
+    bottom: 40%;      /* Adjust position as needed */
+    left: 10%;        /* Adjust horizontal position */
+    width: 256px;     /* Width of one frame */
+    height: 256px;     /* Height of one frame */
+    background: url('assets/Jeep/Ride.png') no-repeat;
+    /* Jeep starts static; the "moving" class triggers animation */
+  }
+  
+  /* Jeep animation when moving */
+  .jeep.moving {
+    animation: jeepRide 4s steps(32) forwards;
+  }
+  
+  @keyframes jeepRide {
+    from { background-position: 0px; }
+    to   { background-position: 2048px; }
+  }
+  
+  /* Button styling */
+  #fillgas {
+    color: rgb(250, 221, 1);
+    background-color: black;
+    position: absolute;
+    top: 28%;
+    left: 60%;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
