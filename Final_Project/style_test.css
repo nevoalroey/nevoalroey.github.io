@@ -1,10 +1,13 @@
 /* Basic reset for the page */
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url('Assets/Background/background.jpeg') no-repeat center center;
+  background-size: cover;
+}
+
   /* Shared sprite styling */
   .sprite {
     position: absolute;
@@ -15,10 +18,10 @@ body {
   .poly {
     width: 48px;  /* Adjust based on your sprite size */
     height: 48px;
-    bottom: 50%; /* Adjust Poly's vertical position on screen */
-    left: 49%;   /* Adjust horizontal position as needed */
+    bottom: 40%; /* Adjust Poly's vertical position on screen */
+    left: 10%;   /* Adjust horizontal position as needed */
     transform: scale(1.5); /* Correct scaling using transform */
-    transition: all 3s ease-in-out;
+   transition: bottom 2s ease-in-out;
   }
   
   .poly.idle {
@@ -44,7 +47,7 @@ body {
   
   /* Jeep Sprite */
   .jeep {
-    bottom: 40%;      /* Adjust position as needed */
+    bottom: 50%;      /* Adjust position as needed */
     left: 10%;        /* Adjust horizontal position */
     width: 256px;     /* Width of one frame */
     height: 256px;     /* Height of one frame */
