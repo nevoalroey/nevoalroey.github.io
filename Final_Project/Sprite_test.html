@@ -1,25 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Art Puzzle Game</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poly to Car Animation Demo</title>
+  <link rel="stylesheet" href="style_test.css" />
 </head>
 <body>
-    <!-- Test Images -->
-    <h2>Testing Images</h2>
-
-    <!-- Background Image -->
-    <h3>Background Image:</h3>
-    <img src="Final_Project/Assets/Background/background.png" alt="Background Image" width="300" />
-
-    <!-- Character Image -->
-    <h3>Character Image:</h3>
-    <img src="Final_Project/Assets/man/walking_sheet.png" alt="Character Image" width="300" />
-
-    <!-- Jeep Image -->
-    <h3>Jeep Image:</h3>
-    <img src="Final_Project/Assets/Jeep/Idle.png" alt="Jeep Image" width="300" />
-
+  <!-- Poly sprite starts idle -->
+  <div class="sprite poly idle" id="poly"></div>
+  <!-- Jeep sprite (the car) -->
+  <div class="sprite jeep" id="jeep"></div>
+  <!-- Button to trigger the transition -->
+  <button id="enter-house">Enter the House</button>
+  
+  <script src="Animation_Handler.js"></script>
 </body>
 </html>
