@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: url('Assets/Background/background.jpeg') no-repeat center center;
+  background: url('Assets/Background/background.png') no-repeat center center;
   background-size: cover;
 }
 
