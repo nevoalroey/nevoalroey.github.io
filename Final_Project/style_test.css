@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background: url('assets/Background/background.png') no-repeat center center;
+  background: url('Assets/Background/background.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -15,7 +15,7 @@ body {
   left: 15%;
   width: 300px;
   height: 300px;
-  background: url('assets/Background/Tree1.png') no-repeat center center;
+  background: url('Assets/Background/Tree1.png') no-repeat center center;
   background-size: contain;
   transform: scale(8);
 }
@@ -26,7 +26,7 @@ body {
   left: 70%;
   width: 300px;
   height: 300px;
-  background: url('assets/Background/Tree2.png') no-repeat center center;
+  background: url('Assets/Background/Tree2.png') no-repeat center center;
   background-size: contain;
   transform: scale(8);
 }
@@ -37,7 +37,7 @@ body {
   left: 50%;
   width: 300px;
   height: 300px;
-  background: url('assets/Background/Tree3.png') no-repeat center center;
+  background: url('Assets/Background/Tree3.png') no-repeat center center;
   background-size: contain;
   transform: scale(8);
 }
@@ -49,7 +49,7 @@ body {
   right: 8%;
   width: 1000px;  /* Increased from 200px to 1000px */
   height: 1000px; /* Increased from 200px to 1000px */
-  background: url('assets/Background/GasStation.png') no-repeat center center;
+  background: url('Assets/Background/GasStation.png') no-repeat center center;
   background-size: contain;
 }
 
@@ -60,7 +60,7 @@ body {
   right: -15%;  /* 3% to the right of gas station (8% - 3% = 5%) */
   width: 1000px;
   height: 1000px;
-  background: url('assets/Background/Gas.png') no-repeat center center;
+  background: url('Assets/Background/Gas.png') no-repeat center center;
   background-size: contain;
 }
 
@@ -81,12 +81,12 @@ body {
   }
   
   .poly.idle {
-    background: url('assets/poly/smoking_sheet.png');
+    background: url('Assets/poly/smoking_sheet.png');
     animation: idle 2.5s steps(10) infinite;
   }
   
   .poly.walk {
-    background: url('assets/poly/walking_sheet.png');
+    background: url('Assets/poly/walking_sheet.png');
     animation: walk 0.8s steps(4) infinite;
     transition: all 4s ease-in-out;
     left: 80%;    /* Move to the right side of the screen */
@@ -94,7 +94,7 @@ body {
   }
   
   .poly.fill-gas {
-    background: url('assets/poly/walking_sheet.png');
+    background: url('Assets/poly/walking_sheet.png');
     animation: walk 1s steps(4) infinite;
     transition: all 2s ease-in-out;
     bottom: 60%;  /* Move up 2% */
@@ -118,7 +118,7 @@ body {
     right: 8%;        /* Adjust horizontal position */
     width: 256px;     /* Width of one frame */
     height: 256px;     /* Height of one frame */
-    background: url('assets/Jeep/Ride.png') no-repeat;
+    background: url('Assets/Jeep/Idle.png') no-repeat;
     transition: right 2s ease-in-out;
   }
   
@@ -130,7 +130,7 @@ body {
   .jeep.moving {
     animation: jeepRide 4s steps(32) forwards;
   }
-  
+
   @keyframes jeepRide {
     from { background-position: 0px; }
     to   { background-position: 2048px; }
